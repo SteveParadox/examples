@@ -5,7 +5,7 @@ reference app is a simple board game (called 'Plane Strike') in which you play
 against an agent trained by reinforcement learning. The agent runs the
 reinforcement learning model on-device using TensorFlow Lite.
 
-The game rule for Plane Strike is very simple. It is a turn-based board game and
+- The game rule for Plane Strike is very simple. It is a turn-based board game and
 is very similar to the
 [Battleship game](https://en.wikipedia.org/wiki/Battleship_\(game\)) game. The
 only difference is that Battleship allows you to place battleships (2–5 cells in
@@ -18,12 +18,12 @@ game, the agent’s plane is hidden at the beginning; you need to guess out all
 the plane cells before the agent does to your plane cells. Whoever finds out all
 of the opponent's plane cells first wins. Then the game restarts.
 
-At the beginning of the game, the app will randomly place the planes for the
+- At the beginning of the game, the app will randomly place the planes for the
 agent and the player. You can see the plane as 8 blue cells in your board. If
 you are not happy with the placement, just reset the game so that the plane
 placements will be changed.
 
-During the gameplay, if you, as the player, tap a cell in the agent's board at
+- During the gameplay, if you, as the player, tap a cell in the agent's board at
 the top, and that cell turns out to be a 'plane cell', it will turn red (think
 of this action as a hit); if it's not a 'plane cell', the cell will turn yellow
 as a miss. The app also tracks the number of hits of both boards so that you can
@@ -38,7 +38,7 @@ To train the agent, we have implemented different ways:
     [JAX](https://github.com/google/jax)/[Flax](https://github.com/google/flax)
     (along with an [OpenAI gym environment](https://gym.openai.com/))
 
-*Note that the JAX implementation is highly experimental
+* Note that the JAX implementation is highly experimental
 
 You can choose one of the 3 training paths to train the model by yourself. It's
 possible to make training faster or more effective by taking advantage of the
