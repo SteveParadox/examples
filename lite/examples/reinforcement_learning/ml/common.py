@@ -99,7 +99,7 @@ def initialize_random_hidden_board(board_size):
 
   plane_orientation = random.randint(0, 3)
 
-  # Figrue out the location of plane core as the '*' below
+  # Figure out the location of plane core as the '*' below
   #   | |      |      | |    ---
   #   |-*-    -*-    -*-|     |
   #   | |      |      | |    -*-
