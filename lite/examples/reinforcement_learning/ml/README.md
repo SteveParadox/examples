@@ -18,12 +18,12 @@ game, the agent’s plane is hidden at the beginning; you need to guess out all
 the plane cells before the agent does to your plane cells. Whoever finds out all
 of the opponent's plane cells first wins. Then the game restarts.
 
-At the beginning of the game, the app will randomly place the planes for the
+* At the beginning of the game, the app will randomly place the planes for the
 agent and the player. You can see the plane as 8 blue cells in your board. If
 you are not happy with the placement, just reset the game so that the plane
 placements will be changed.
 
-During the gameplay, if you, as the player, tap a cell in the agent's board at
+* During the gameplay, if you, as the player, tap a cell in the agent's board at
 the top, and that cell turns out to be a 'plane cell', it will turn red (think
 of this action as a hit); if it's not a 'plane cell', the cell will turn yellow
 as a miss. The app also tracks the number of hits of both boards so that you can
@@ -38,7 +38,7 @@ To train the agent, we have implemented different ways:
     [JAX](https://github.com/google/jax)/[Flax](https://github.com/google/flax)
     (along with an [OpenAI gym environment](https://gym.openai.com/))
 
-*Note that the JAX implementation is highly experimental
+* Note that the JAX implementation is highly experimental
 
 You can choose one of the 3 training paths to train the model by yourself. It's
 possible to make training faster or more effective by taking advantage of the
@@ -73,10 +73,12 @@ You can see the agent become smarter (indicated by the increasing average reward
 and decreasing episode length), as training progresses.
 
 After training, you will get a `planestrike_tf_agents.tflite` file, which you
-can then integrate into the Android app we provide in the `android` folder. Note
-that the TFLite model converted from the TF Agents policy is a little from
+can then integrate into the Android app we provide in the `android` folder.
+
+### Note:
+*TFLite model converted from the TF Agents policy is a little from
 TF/JAX model in that it takes 4 tensors as input (only the 3rd tensor
-'observation' is useful for inferene though):
+'observation' is useful for inferene though):*
 
 ![TFLITE_FROM_TF_AGENTS](tf_agents/tflite_from_tf_agents.png)
 
